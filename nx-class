@@ -1,0 +1,1015 @@
+exception.py
+class NetworkXException(Exception):
+class NetworkXError(NetworkXException):
+class NetworkXPointlessConcept(NetworkXException):
+class NetworkXAlgorithmError(NetworkXException):
+class NetworkXUnfeasible(NetworkXAlgorithmError):
+class NetworkXNoPath(NetworkXUnfeasible):
+class NetworkXNoCycle(NetworkXUnfeasible):
+class HasACycle(NetworkXException):
+class NetworkXUnbounded(NetworkXAlgorithmError):
+class NetworkXNotImplemented(NetworkXException):
+class NodeNotFound(NetworkXException):
+class AmbiguousSolution(NetworkXException):
+class ExceededMaxIterations(NetworkXException):
+class PowerIterationFailedConvergence(ExceededMaxIterations):
+
+generators/internet_as_graphs.py
+class AS_graph_generator:
+
+generators/tests/test_lattice.py
+class TestGrid2DGraph:
+class TestGridGraph:
+class TestHypercubeGraph:
+class TestTriangularLatticeGraph:
+class TestHexagonalLatticeGraph:
+
+generators/tests/test_degree_seq.py
+class TestConfigurationModel:
+
+generators/degree_seq.py
+class DegreeSequenceRandomGraph:
+
+generators/tests/test_ego.py
+class TestGeneratorEgo:
+
+generators/tests/test_duplication.py
+class TestDuplicationDivergenceGraph:
+class TestPartialDuplicationGraph:
+
+generators/tests/test_classic.py
+class TestGeneratorClassic:
+
+generators/tests/test_geometric.py
+class TestRandomGeometricGraph:
+class TestSoftRandomGeometricGraph:
+class TestGeographicalThresholdGraph:
+class TestWaxmanGraph:
+class TestNavigableSmallWorldGraph:
+class TestThresholdedRandomGeometricGraph:
+
+generators/tests/test_stochastic.py
+class TestStochasticGraph:
+
+lazy_imports.py
+class DelayedImportErrorModule(types.ModuleType):
+
+generators/tests/test_mycielski.py
+class TestMycielski:
+
+generators/tests/test_line.py
+class TestGeneratorLine:
+class TestGeneratorInverseLine:
+
+generators/tests/test_random_graphs.py
+class TestGeneratorsRandom:
+
+generators/tests/test_internet_as_graphs.py
+class TestInternetASTopology:
+
+generators/tests/test_directed.py
+class TestGeneratorsDirected:
+class TestRandomKOutGraph:
+class TestUniformRandomKOutGraph:
+
+testing/tests/test_utils.py
+class _GenericTest:
+class TestNodesEqual(_GenericTest):
+class TestEdgesEqual(_GenericTest):
+class TestGraphsEqual(_GenericTest):
+
+generators/tests/test_small.py
+class TestGeneratorsSmall:
+
+generators/tests/test_atlas.py
+class TestAtlasGraph:
+class TestAtlasGraphG:
+
+generators/tests/test_harary_graph.py
+class TestHararyGraph:
+
+generators/tests/test_interval_graph.py
+class TestIntervalGraph:
+
+generators/tests/test_nonisomorphic_trees.py
+class TestGeneratorNonIsomorphicTrees:
+
+generators/tests/test_intersection.py
+class TestIntersectionGraph:
+
+generators/tests/test_random_clustered.py
+class TestRandomClusteredGraph:
+
+utils/mapped_queue.py
+class _HeapElement:
+class MappedQueue:
+
+utils/heaps.py
+class MinHeap:
+    class _Item:
+class PairingHeap(MinHeap):
+    class _Node(MinHeap._Item):
+class BinaryHeap(MinHeap):
+
+utils/union_find.py
+class UnionFind:
+
+utils/misc.py
+class PythonRandomInterface:
+
+utils/decorators.py
+class argmap:
+    class in broad terms to aid in understanding how to use it.
+
+utils/tests/test_heaps.py
+class X:
+
+tests/test_relabel.py
+class TestRelabel:
+
+utils/tests/test_misc.py
+class TestNumpyArray:
+
+algorithms/planarity.py
+class Interval:
+class ConflictPair:
+class LRPlanarity:
+class PlanarEmbedding(nx.DiGraph):
+
+algorithms/regular.py
+    class LargeKGadget:
+    class SmallKGadget:
+
+algorithms/matching.py
+    class NoNode:
+    class Blossom:
+
+algorithms/isomorphism/tests/test_isomorphism.py
+class TestIsomorph:
+
+algorithms/bipartite/tests/test_matrix.py
+class TestBiadjacencyMatrix:
+
+algorithms/bipartite/tests/test_project.py
+class TestBipartiteProject:
+class TestBipartiteWeightedProjection:
+
+algorithms/bipartite/tests/test_spectral_bipartivity.py
+class TestSpectralBipartivity:
+
+algorithms/community/quality.py
+class NotAPartition(NetworkXError):
+
+algorithms/flow/tests/test_maxflow_large_graph.py
+class TestMaxflowLargeGraph:
+
+algorithms/isomorphism/tests/test_ismags.py
+class TestSelfIsomorphism:
+class TestSubgraphIsomorphism:
+class TestWikipediaExample:
+class TestLargestCommonSubgraph:
+
+algorithms/flow/networksimplex.py
+class _DataEssentialsAndFunctions:
+
+algorithms/flow/tests/test_mincost.py
+class TestMinCostFlow:
+
+algorithms/flow/tests/test_gomory_hu.py
+class TestGomoryHuTree:
+
+algorithms/flow/tests/test_maxflow.py
+class TestMaxflowMinCutCommon:
+class TestMaxFlowMinCutInterface:
+class TestCutoff:
+
+algorithms/flow/utils.py
+class CurrentEdge:
+class Level:
+class GlobalRelabelThreshold:
+
+algorithms/bipartite/tests/test_covering.py
+class TestMinEdgeCover:
+
+algorithms/bipartite/tests/test_matching.py
+class TestMatching:
+class TestMinimumWeightFullMatching:
+
+algorithms/coloring/tests/test_coloring.py
+class TestColoring:
+
+algorithms/community/tests/test_centrality.py
+class TestGirvanNewman:
+
+algorithms/community/tests/test_label_propagation.py
+class TestAsynLpaCommunities:
+
+algorithms/coloring/greedy_coloring.py
+class _Node:
+class _AdjEntry:
+
+algorithms/bipartite/tests/test_generators.py
+class TestGeneratorsBipartite:
+
+algorithms/isomorphism/tests/test_temporalisomorphvf2.py
+class TestTimeRespectingGraphMatcher:
+class TestDiTimeRespectingGraphMatcher:
+
+algorithms/isomorphism/tests/test_match_helpers.py
+class TestGenericMultiEdgeMatch:
+
+algorithms/community/tests/test_kclique.py
+class TestZacharyKarateClub:
+
+algorithms/bipartite/tests/test_basic.py
+class TestBipartiteBasic:
+
+algorithms/bipartite/tests/test_centrality.py
+class TestBipartiteCentrality:
+
+algorithms/community/tests/test_quality.py
+class TestPerformance:
+class TestCoverage:
+
+algorithms/bipartite/tests/test_edgelist.py
+class TestEdgelist:
+
+algorithms/isomorphism/tests/test_vf2userfunc.py
+class TestNodeMatch_Graph:
+class TestEdgeMatch_MultiGraph:
+class TestEdgeMatch_DiGraph(TestNodeMatch_Graph):
+class TestEdgeMatch_MultiDiGraph(TestEdgeMatch_MultiGraph):
+
+algorithms/isomorphism/tests/test_isomorphvf2.py
+class TestWikipediaExample:
+class TestVF2GraphDB:
+class TestAtlas:
+
+algorithms/shortest_paths/tests/test_astar.py
+class TestAStar:
+
+algorithms/assortativity/tests/test_mixing.py
+class TestDegreeMixingDict(BaseTestDegreeMixing):
+class TestDegreeMixingMatrix(BaseTestDegreeMixing):
+class TestAttributeMixingDict(BaseTestAttributeMixing):
+class TestAttributeMixingMatrix(BaseTestAttributeMixing):
+class TestNumericMixingMatrix(BaseTestNumericMixing):
+
+algorithms/assortativity/tests/test_neighbor_degree.py
+class TestAverageNeighbor:
+
+algorithms/assortativity/tests/test_connectivity.py
+class TestNeighborConnectivity:
+
+algorithms/shortest_paths/tests/test_generic.py
+class TestGenericPath:
+class TestAverageShortestPathLength:
+class TestAverageShortestPathLengthNumpy:
+
+algorithms/shortest_paths/tests/test_dense.py
+class TestFloyd:
+
+algorithms/assortativity/tests/test_correlation.py
+class TestDegreeMixingCorrelation(BaseTestDegreeMixing):
+class TestAttributeMixingCorrelation(BaseTestAttributeMixing):
+class TestNumericMixingCorrelation(BaseTestNumericMixing):
+
+algorithms/traversal/tests/test_dfs.py
+class TestDFS:
+class TestDepthLimitedSearch:
+
+algorithms/traversal/tests/test_beamsearch.py
+class TestBeamSearch:
+
+algorithms/traversal/tests/test_edgedfs.py
+class TestEdgeDFS:
+
+algorithms/assortativity/tests/test_pairs.py
+class TestAttributeMixingXY(BaseTestAttributeMixing):
+class TestDegreeMixingXY(BaseTestDegreeMixing):
+
+algorithms/traversal/tests/test_edgebfs.py
+class TestEdgeBFS:
+
+algorithms/traversal/tests/test_bfs.py
+class TestBFS:
+class TestBreadthLimitedSearch:
+
+algorithms/assortativity/tests/base_test.py
+class BaseTestAttributeMixing:
+class BaseTestDegreeMixing:
+class BaseTestNumericMixing:
+
+algorithms/minors/tests/test_contraction.py
+class TestQuotient:
+class TestContraction:
+
+algorithms/shortest_paths/tests/test_unweighted.py
+class TestUnweightedPath:
+
+algorithms/simple_paths.py
+class PathBuffer:
+
+algorithms/components/tests/test_connected.py
+class TestConnected:
+
+algorithms/shortest_paths/tests/test_weighted.py
+class WeightedTestBase:
+class TestWeightedPath(WeightedTestBase):
+class TestDijkstraPathLength:
+class TestMultiSourceDijkstra:
+class TestBellmanFordAndGoldbergRadzik(WeightedTestBase):
+class TestJohnsonAlgorithm(WeightedTestBase):
+
+algorithms/components/tests/test_attracting.py
+class TestAttractingComponents:
+
+algorithms/chordal.py
+class NetworkXTreewidthBoundExceeded(nx.NetworkXException):
+
+algorithms/components/tests/test_semiconnected.py
+class TestIsSemiconnected:
+
+algorithms/components/tests/test_strongly_connected.py
+class TestStronglyConnected:
+
+algorithms/components/tests/test_weakly_connected.py
+class TestWeaklyConnected:
+
+algorithms/isomorphism/temporalisomorphvf2.py
+class TimeRespectingGraphMatcher(GraphMatcher):
+class TimeRespectingDiGraphMatcher(DiGraphMatcher):
+
+algorithms/tests/test_cycles.py
+class TestCycles:
+class TestFindCycle:
+class TestMinimumCycles:
+
+algorithms/tests/test_dag.py
+class TestDagLongestPath:
+class TestDagLongestPathLength:
+class TestDAG:
+        class Test_Node:
+class TestDagToBranching:
+
+algorithms/isomorphism/isomorphvf2.py
+class GraphMatcher:
+class DiGraphMatcher(GraphMatcher):
+class GMState:
+class DiGMState:
+
+algorithms/isomorphism/ismags.py
+class ISMAGS:
+
+algorithms/tests/test_chains.py
+class TestChainDecomposition:
+
+algorithms/tests/test_regular.py
+class TestKFactor:
+class TestIsRegular:
+class TestIsKRegular:
+
+algorithms/tests/test_euler.py
+class TestIsEulerian:
+class TestEulerianCircuit:
+class TestIsSemiEulerian:
+class TestHasEulerianPath:
+class TestFindPathStart:
+class TestEulerianPath:
+class TestEulerize:
+
+algorithms/tests/test_planar_drawing.py
+class Vector:
+
+algorithms/tests/test_planarity.py
+class TestLRPlanarity:
+class TestPlanarEmbeddingClass:
+
+algorithms/tests/test_reciprocity.py
+class TestReciprocity:
+
+algorithms/tests/test_structuralholes.py
+class TestStructuralHoles:
+
+algorithms/tests/test_matching.py
+class TestMaxWeightMatching:
+class TestIsMatching:
+class TestIsMaximalMatching:
+class TestIsPerfectMatching:
+class TestMaximalMatching:
+
+algorithms/tests/test_similarity.py
+class TestSimilarity:
+
+algorithms/tests/test_mis.py
+class TestMaximalIndependantSet:
+
+algorithms/tests/test_clique.py
+class TestCliques:
+class TestEnumerateAllCliques:
+
+algorithms/tests/test_cluster.py
+class TestTriangles:
+class TestDirectedClustering:
+class TestDirectedWeightedClustering:
+class TestWeightedClustering:
+class TestClustering:
+class TestTransitivity:
+class TestSquareClustering:
+class TestAverageClustering:
+class TestGeneralizedDegree:
+
+algorithms/tests/test_dominance.py
+class TestImmediateDominators:
+class TestDominanceFrontiers:
+
+algorithms/tests/test_wiener.py
+class TestWienerIndex:
+
+algorithms/tests/test_covering.py
+class TestMinEdgeCover:
+class TestIsEdgeCover:
+
+algorithms/tests/test_efficiency.py
+class TestEfficiency:
+
+algorithms/tests/test_cuts.py
+class TestCutSize:
+class TestVolume:
+class TestNormalizedCutSize:
+class TestConductance:
+class TestEdgeExpansion:
+class TestNodeExpansion:
+class TestBoundaryExpansion:
+class TestMixingExpansion:
+
+algorithms/tests/test_communicability.py
+class TestCommunicability:
+
+algorithms/tests/test_distance_regular.py
+class TestDistanceRegular:
+class TestStronglyRegular:
+
+algorithms/tests/test_summarization.py
+class TestDirectedDedensification:
+class TestUnDirectedDedensification:
+class AbstractSNAP:
+class TestSNAPNoEdgeTypes(AbstractSNAP):
+class TestSNAPUndirected(AbstractSNAP):
+class TestSNAPDirected(AbstractSNAP):
+class TestSNAPUndirectedMulti(AbstractSNAP):
+class TestSNAPDirectedMulti(AbstractSNAP):
+
+algorithms/tests/test_vitality.py
+class TestClosenessVitality:
+
+algorithms/tests/test_voronoi.py
+class TestVoronoiCells:
+
+algorithms/tests/test_simple_paths.py
+class TestIsSimplePath:
+
+algorithms/tests/test_distance_measures.py
+class TestDistance:
+class TestResistanceDistance:
+class TestBarycenter:
+
+algorithms/tests/test_threshold.py
+class TestGeneratorThreshold:
+
+algorithms/tests/test_core.py
+class TestCore:
+
+algorithms/tests/test_graphical.py
+class TestAtlas:
+
+algorithms/tests/test_bridges.py
+class TestBridges:
+class TestLocalBridges:
+
+algorithms/tests/test_chordal.py
+class TestMCS:
+
+algorithms/tests/test_boundary.py
+class TestNodeBoundary:
+class TestEdgeBoundary:
+
+algorithms/tests/test_lowest_common_ancestors.py
+class TestTreeLCA:
+class TestDAGLCA:
+
+algorithms/tests/test_link_prediction.py
+class TestResourceAllocationIndex:
+class TestJaccardCoefficient:
+class TestAdamicAdarIndex:
+class TestCommonNeighborCentrality:
+class TestPreferentialAttachment:
+class TestCNSoundarajanHopcroft:
+class TestRAIndexSoundarajanHopcroft:
+class TestWithinInterCluster:
+
+algorithms/tests/test_max_weight_clique.py
+class TestMaximumWeightClique:
+
+algorithms/tests/test_node_classification.py
+class TestHarmonicFunction:
+class TestLocalAndGlobalConsistency:
+
+algorithms/isomorphism/vf2userfunc.py
+class GraphMatcher(vf2.GraphMatcher):
+class DiGraphMatcher(vf2.DiGraphMatcher):
+class MultiGraphMatcher(GraphMatcher):
+class MultiDiGraphMatcher(DiGraphMatcher):
+
+algorithms/centrality/tests/test_betweenness_centrality_subset.py
+class TestSubsetBetweennessCentrality:
+class TestBetweennessCentralitySources:
+class TestEdgeSubsetBetweennessCentrality:
+
+algorithms/centrality/tests/test_subgraph.py
+class TestSubgraph:
+
+algorithms/centrality/tests/test_reaching.py
+class TestGlobalReachingCentrality:
+class TestLocalReachingCentrality:
+
+algorithms/centrality/tests/test_second_order_centrality.py
+class TestSecondOrderCentrality:
+
+algorithms/centrality/tests/test_current_flow_betweenness_centrality_subset.py
+class TestFlowBetweennessCentrality:
+class TestEdgeFlowBetweennessCentrality:
+
+algorithms/centrality/tests/test_closeness_centrality.py
+class TestClosenessCentrality:
+
+algorithms/centrality/tests/test_percolation_centrality.py
+class TestPercolationCentrality:
+
+algorithms/centrality/tests/test_harmonic_centrality.py
+class TestClosenessCentrality:
+
+algorithms/centrality/tests/test_current_flow_closeness.py
+class TestFlowClosenessCentrality:
+class TestWeightedFlowClosenessCentrality:
+
+algorithms/centrality/tests/test_load_centrality.py
+class TestLoadCentrality:
+
+algorithms/centrality/tests/test_eigenvector_centrality.py
+class TestEigenvectorCentrality:
+class TestEigenvectorCentralityDirected:
+class TestEigenvectorCentralityExceptions:
+
+algorithms/centrality/tests/test_voterank.py
+class TestVoteRankCentrality:
+
+algorithms/centrality/tests/test_degree_centrality.py
+class TestDegreeCentrality:
+
+algorithms/centrality/tests/test_current_flow_betweenness_centrality.py
+class TestFlowBetweennessCentrality:
+class TestApproximateFlowBetweennessCentrality:
+class TestWeightedFlowBetweennessCentrality:
+class TestEdgeFlowBetweennessCentrality:
+
+algorithms/centrality/tests/test_group.py
+class TestGroupBetweennessCentrality:
+class TestProminentGroup:
+class TestGroupClosenessCentrality:
+class TestGroupDegreeCentrality:
+
+algorithms/centrality/tests/test_betweenness_centrality.py
+class TestBetweennessCentrality:
+class TestWeightedBetweennessCentrality:
+class TestEdgeBetweennessCentrality:
+class TestWeightedEdgeBetweennessCentrality:
+
+algorithms/centrality/tests/test_dispersion.py
+class TestDispersion:
+
+algorithms/centrality/tests/test_katz_centrality.py
+class TestKatzCentrality:
+class TestKatzCentralityNumpy:
+class TestKatzCentralityDirected:
+class TestKatzCentralityDirectedNumpy(TestKatzCentralityDirected):
+class TestKatzEigenvectorVKatz:
+
+algorithms/centrality/flow_matrix.py
+class InverseLaplacian:
+class FullInverseLaplacian(InverseLaplacian):
+class SuperLUInverseLaplacian(InverseLaplacian):
+class CGInverseLaplacian(InverseLaplacian):
+
+algorithms/similarity.py
+    class CostMatrix:
+    class MaxCost:
+
+algorithms/clique.py
+class MaxWeightClique:
+
+algorithms/approximation/treewidth.py
+class MinDegreeHeuristic:
+
+algorithms/approximation/kcomponents.py
+class _AntiGraph(nx.Graph):
+    class AntiAtlasView(Mapping):
+    class AntiAdjacencyView(AntiAtlasView):
+    class AntiDegreeView(nx.reportviews.DegreeView):
+
+algorithms/link_analysis/tests/test_hits.py
+class TestHITS:
+
+algorithms/connectivity/edge_kcomponents.py
+class EdgeComponentAuxGraph:
+
+algorithms/approximation/tests/test_vertex_cover.py
+class TestMWVC:
+
+algorithms/link_analysis/tests/test_pagerank.py
+class TestPageRank:
+class TestPageRankScipy(TestPageRank):
+
+algorithms/approximation/tests/test_kcomponents.py
+class TestAntiGraph:
+
+algorithms/approximation/tests/test_clique.py
+class TestCliqueRemoval:
+class TestMaxClique:
+
+algorithms/approximation/tests/test_dominating_set.py
+class TestMinWeightDominatingSet:
+
+algorithms/approximation/tests/test_connectivity.py
+class TestAllPairsNodeConnectivityApprox:
+
+algorithms/connectivity/tests/test_connectivity.py
+class TestAllPairsNodeConnectivity:
+
+algorithms/approximation/tests/test_traveling_salesman.py
+class TestBase:
+class TestGreedyTSP(TestBase):
+class TestSimulatedAnnealingTSP(TestBase):
+class TestThresholdAcceptingTSP(TestSimulatedAnnealingTSP):
+
+algorithms/approximation/tests/test_distance_measures.py
+class TestDiameter:
+
+tests/test_convert_scipy.py
+class TestConvertScipy:
+        class G:
+
+algorithms/approximation/tests/test_treewidth.py
+class TestTreewidthMinDegree:
+class TestTreewidthMinFillIn:
+
+algorithms/approximation/tests/test_steinertree.py
+class TestSteinerTree:
+
+tests/test_convert.py
+class TestConvert:
+        class G:
+        class G:
+        class G:
+        class custom_dict(dict):
+        class Custom(nx.Graph):
+
+utils/tests/test_mapped_queue.py
+class TestMappedQueue:
+class TestMappedDict(TestMappedQueue):
+
+utils/tests/test_decorators.py
+class TestOpenFileDecorator:
+class TestRandomState:
+class TestArgmap:
+    class ArgmapError(RuntimeError):
+
+algorithms/tree/mst.py
+class EdgePartition(Enum):
+class SpanningTreeIterator:
+    class Partition:
+
+algorithms/tree/branchings.py
+class MultiDiGraph_EdgeKey(nx.MultiDiGraph):
+class Edmonds:
+class ArborescenceIterator:
+    class Partition:
+
+algorithms/tree/coding.py
+class NotATree(nx.NetworkXException):
+
+tests/test_convert_numpy.py
+class TestConvertNumpyMatrix:
+class TestConvertNumpyArray:
+
+tests/test_convert_pandas.py
+class TestConvertPandas:
+
+algorithms/tree/tests/test_recognition.py
+class TestTreeRecognition:
+class TestDirectedTreeRecognition(TestTreeRecognition):
+
+classes/filters.py
+class show_nodes:
+
+classes/graph.py
+class Graph:
+
+classes/multidigraph.py
+class MultiDiGraph(MultiGraph, DiGraph):
+
+classes/digraph.py
+class DiGraph(Graph):
+
+linalg/algebraicconnectivity.py
+class _PCGSolver:
+class _LUSolver:
+
+classes/tests/test_digraph_historical.py
+class TestDiGraphHistorical(HistoricalTests):
+
+classes/tests/test_graphviews.py
+class TestReverseView:
+        class MyGraph(nx.DiGraph):
+class TestMultiReverseView:
+class TestToDirected:
+class TestToUndirected:
+class TestChainsOfViews:
+        class MyGraph(nx.DiGraph):
+
+linalg/tests/test_algebraic_connectivity.py
+class TestAlgebraicConnectivity:
+class TestSpectralOrdering:
+
+classes/tests/test_reportviews.py
+class TestNodeView:
+class TestNodeDataView:
+class TestNodeViewSetOps:
+class TestNodeDataViewSetOps(TestNodeViewSetOps):
+class TestNodeDataViewDefaultSetOps(TestNodeDataViewSetOps):
+class TestEdgeDataView:
+class TestOutEdgeDataView(TestEdgeDataView):
+class TestInEdgeDataView(TestOutEdgeDataView):
+class TestMultiEdgeDataView(TestEdgeDataView):
+class TestOutMultiEdgeDataView(TestOutEdgeDataView):
+class TestInMultiEdgeDataView(TestOutMultiEdgeDataView):
+class TestEdgeView:
+class TestOutEdgeView(TestEdgeView):
+class TestInEdgeView(TestEdgeView):
+class TestMultiEdgeView(TestEdgeView):
+class TestOutMultiEdgeView(TestMultiEdgeView):
+class TestInMultiEdgeView(TestMultiEdgeView):
+class TestDegreeView:
+class TestDiDegreeView(TestDegreeView):
+class TestOutDegreeView(TestDegreeView):
+class TestInDegreeView(TestDegreeView):
+class TestMultiDegreeView(TestDegreeView):
+class TestDiMultiDegreeView(TestMultiDegreeView):
+class TestOutMultiDegreeView(TestDegreeView):
+class TestInMultiDegreeView(TestDegreeView):
+
+classes/tests/test_ordered.py
+class TestOrdered:
+class TestOrderedFeatures:
+
+classes/tests/test_graph_historical.py
+class TestGraphHistorical(HistoricalTests):
+
+linalg/tests/test_graphmatrix.py
+class TestGraphMatrix:
+
+linalg/tests/test_laplacian.py
+class TestLaplacian:
+
+classes/tests/test_filters.py
+class TestFilterFactory:
+
+linalg/tests/test_spectrum.py
+class TestSpectrum:
+
+classes/tests/test_graph.py
+class BaseGraphTester:
+        class MyGraph(self.Graph):
+class BaseAttrGraphTester(BaseGraphTester):
+        class newGraph(G.to_undirected_class()):
+        class newDiGraph(G.to_directed_class()):
+class TestGraph(BaseAttrGraphTester):
+class TestEdgeSubgraph:
+
+classes/tests/test_subgraphviews.py
+class TestSubGraphView:
+class TestSubDiGraphView(TestSubGraphView):
+class TestMultiGraphView(TestSubGraphView):
+class TestMultiDiGraphView(TestMultiGraphView, TestSubDiGraphView):
+class TestInducedSubGraph:
+class TestEdgeSubGraph:
+
+classes/tests/test_digraph.py
+class BaseDiGraphTester(BaseGraphTester):
+        class Foo:
+class BaseAttrDiGraphTester(BaseDiGraphTester, BaseAttrGraphTester):
+class TestDiGraph(BaseAttrDiGraphTester, _TestGraph):
+class TestEdgeSubgraph(_TestGraphEdgeSubgraph):
+
+linalg/tests/test_modularity.py
+class TestModularity:
+
+classes/tests/test_special.py
+    class mydict1(dict):
+    class mydict2(dict):
+    class mydict3(dict):
+    class mydict4(dict):
+    class mydict5(dict):
+        class MyGraph(Graph):
+class TestSpecialGraph(_TestGraph):
+class TestOrderedGraph(_TestGraph):
+        class MyGraph(nx.Graph):
+class TestThinGraph(BaseGraphTester):
+        class MyGraph(nx.Graph):
+class TestSpecialDiGraph(_TestDiGraph):
+class TestOrderedDiGraph(_TestDiGraph):
+        class MyGraph(nx.DiGraph):
+class TestThinDiGraph(BaseDiGraphTester):
+        class MyGraph(nx.DiGraph):
+class TestSpecialMultiGraph(_TestMultiGraph):
+class TestOrderedMultiGraph(_TestMultiGraph):
+        class MyGraph(nx.MultiGraph):
+class TestSpecialMultiDiGraph(_TestMultiDiGraph):
+class TestOrderedMultiDiGraph(_TestMultiDiGraph):
+        class MyGraph(nx.MultiDiGraph):
+
+classes/tests/test_function.py
+class TestFunction:
+class TestCommonNeighbors:
+
+classes/tests/test_coreviews.py
+class TestAtlasView:
+class TestAdjacencyView:
+class TestMultiAdjacencyView(TestAdjacencyView):
+class TestUnionAtlas:
+class TestUnionAdjacency:
+class TestUnionMultiInner(TestUnionAdjacency):
+class TestUnionMultiAdjacency(TestUnionAdjacency):
+class TestFilteredGraphs:
+
+classes/reportviews.py
+class NodeView(Mapping, Set):
+class NodeDataView(Set):
+class DiDegreeView:
+class DegreeView(DiDegreeView):
+class OutDegreeView(DiDegreeView):
+class InDegreeView(DiDegreeView):
+class MultiDegreeView(DiDegreeView):
+class DiMultiDegreeView(DiDegreeView):
+class InMultiDegreeView(DiDegreeView):
+class OutMultiDegreeView(DiDegreeView):
+class OutEdgeDataView:
+class EdgeDataView(OutEdgeDataView):
+class InEdgeDataView(OutEdgeDataView):
+class OutMultiEdgeDataView(OutEdgeDataView):
+class MultiEdgeDataView(OutMultiEdgeDataView):
+class InMultiEdgeDataView(OutMultiEdgeDataView):
+class OutEdgeView(Set, Mapping):
+class EdgeView(OutEdgeView):
+class InEdgeView(OutEdgeView):
+class OutMultiEdgeView(OutEdgeView):
+class MultiEdgeView(OutMultiEdgeView):
+class InMultiEdgeView(OutMultiEdgeView):
+
+classes/tests/test_multigraph.py
+class BaseMultiGraphTester(BaseAttrGraphTester):
+class TestMultiGraph(BaseMultiGraphTester, _TestGraph):
+class TestEdgeSubgraph:
+
+classes/tests/historical_tests.py
+class HistoricalTests:
+
+classes/ordered.py
+class OrderedGraph(Graph):
+class OrderedDiGraph(DiGraph):
+class OrderedMultiGraph(MultiGraph):
+class OrderedMultiDiGraph(MultiDiGraph):
+
+classes/tests/test_multidigraph.py
+class BaseMultiDiGraphTester(BaseMultiGraphTester):
+class TestMultiDiGraph(BaseMultiDiGraphTester, _TestMultiGraph):
+class TestEdgeSubgraph(_TestMultiGraphEdgeSubgraph):
+class CustomDictClass(UserDict):
+class SubMultiDiGraph(nx.MultiDiGraph):
+class TestMultiDiGraphSubclass(TestMultiDiGraph):
+
+linalg/tests/test_bethehessian.py
+class TestBetheHessian:
+
+algorithms/tree/tests/test_mst.py
+class MinimumSpanningTreeTestBase:
+class TestBoruvka(MinimumSpanningTreeTestBase):
+class MultigraphMSTTestBase(MinimumSpanningTreeTestBase):
+class TestKruskal(MultigraphMSTTestBase):
+class TestPrim(MultigraphMSTTestBase):
+class TestSpanningTreeIterator:
+
+classes/coreviews.py
+class AtlasView(Mapping):
+class AdjacencyView(AtlasView):
+class MultiAdjacencyView(AdjacencyView):
+class UnionAtlas(Mapping):
+class UnionAdjacency(Mapping):
+class UnionMultiInner(UnionAtlas):
+class UnionMultiAdjacency(UnionAdjacency):
+class FilterAtlas(Mapping):  # nodedict, nbrdict, keydict
+class FilterAdjacency(Mapping):  # edgedict
+class FilterMultiInner(FilterAdjacency):  # muliedge_seconddict
+class FilterMultiAdjacency(FilterAdjacency):  # multiedgedict
+
+classes/multigraph.py
+class MultiGraph(Graph):
+
+algorithms/tree/tests/test_coding.py
+class TestPruferSequence:
+class TestNestedTuple:
+
+readwrite/graphml.py
+class GraphML:
+class GraphMLWriter(GraphML):
+class IncrementalElement:
+class GraphMLWriterLxml(GraphMLWriter):
+class GraphMLReader(GraphML):
+
+algorithms/tree/tests/test_operations.py
+class TestJoin:
+
+readwrite/tests/test_graph6.py
+class TestGraph6Utils:
+class TestFromGraph6Bytes:
+class TestReadGraph6:
+class TestWriteGraph6:
+class TestToGraph6Bytes:
+
+readwrite/tests/test_adjlist.py
+class TestAdjlist:
+class TestMultilineAdjlist:
+
+readwrite/tests/test_edgelist.py
+class TestEdgelist:
+
+readwrite/tests/test_pajek.py
+class TestPajek:
+
+readwrite/tests/test_leda.py
+class TestLEDA:
+
+readwrite/tests/test_p2g.py
+class TestP2G:
+
+readwrite/tests/test_shp.py
+class TestShp:
+class TestMissingGeometry:
+class TestMissingAttrWrite:
+
+readwrite/tests/test_graphml.py
+class BaseGraphML:
+class TestReadGraphML(BaseGraphML):
+class TestWriteGraphML(BaseGraphML):
+class TestXMLGraphML(TestWriteGraphML):
+
+readwrite/tests/test_gpickle.py
+class TestGpickle:
+
+readwrite/tests/test_gml.py
+class TestGraph:
+class TestPropertyLists:
+
+readwrite/tests/test_sparse6.py
+class TestSparseGraph6:
+class TestWriteSparse6:
+
+readwrite/tests/test_gexf.py
+class TestGEXF:
+
+readwrite/gml.py
+class Pattern(Enum):
+class Token(NamedTuple):
+
+readwrite/gexf.py
+class GEXF:
+class GEXFWriter(GEXF):
+class GEXFReader(GEXF):
+
+readwrite/json_graph/tests/test_adjacency.py
+class TestAdjacency:
+
+drawing/tests/test_layout.py
+class TestLayout:
+
+readwrite/json_graph/tests/test_jit.py
+class TestJIT:
+
+drawing/tests/test_pydot.py
+class TestPydot:
+
+readwrite/json_graph/tests/test_node_link.py
+class TestNodeLink:
+
+drawing/tests/test_agraph.py
+class TestAGraph:

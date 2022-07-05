@@ -1,0 +1,97 @@
+functions/structural_holes/maxBlock.py
+class dom_g:
+
+functions/structural_holes/SHII_metric.py
+class NodeParams:
+
+utils/mapped_queue.py
+class MappedQueue(object):
+
+utils/decorators.py
+class argmap:
+    class in broad terms to aid in understanding how to use it.
+
+utils/exception.py
+class EasyGraphException(Exception):
+class EasyGraphError(EasyGraphException):
+class EasyGraphNotImplemented(EasyGraphException):
+
+functions/structural_holes/metrics.py
+class NodeParams:
+
+functions/graph_embedding/line.py
+class LINE:
+
+functions/graph_embedding/sdne.py
+class SDNE(object):
+
+functions/community/tests/test_motif.py
+class TestMotif(object):
+
+functions/not_sorted/tests/test_pagerank.py
+class TestPageRank:
+
+functions/not_sorted/mst.py
+class UnionFind:
+
+tests/test_convert.py
+class TestConvertNumpyArray:
+class TestConvertPandas:
+class TestConvertScipy:
+
+classes/directed_graph.py
+class DiGraph(Graph):
+
+readwrite/tests/test_graphviz.py
+class TestAGraph:
+
+readwrite/tests/test_gml.py
+class TestGraph:
+class TestPropertyLists:
+
+readwrite/graphml.py
+class GraphML:
+class GraphMLWriter(GraphML):
+class IncrementalElement:
+class GraphMLWriterLxml(GraphMLWriter):
+class GraphMLReader(GraphML):
+
+readwrite/tests/test_pickle.py
+class TestPickle:
+
+readwrite/tests/test_graphml.py
+class BaseGraphML:
+class TestReadGraphML(BaseGraphML):
+class TestWriteGraphML(BaseGraphML):
+
+readwrite/tests/test_gexf.py
+class TestGEXF:
+
+readwrite/gml.py
+class Pattern(Enum):
+class Token(NamedTuple):
+
+readwrite/tests/test_ucinet.py
+class TestUcinet(object):
+
+readwrite/tests/test_pajek.py
+class TestPajek:
+
+classes/tests/test_multigraph.py
+class TestMultiGraph():
+
+readwrite/gexf.py
+class GEXF:
+class GEXFWriter(GEXF):
+class GEXFReader(GEXF):
+
+classes/directed_multigraph.py
+class MultiDiGraph(MultiGraph, DiGraph):
+
+classes/graph.py
+class Graph:
+    class GraphC(cpp_easygraph.Graph):
+    class GraphC():
+
+classes/multigraph.py
+class MultiGraph(Graph):

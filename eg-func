@@ -1,0 +1,857 @@
+utils/alias.py
+def create_alias_table(area_ratio):
+def alias_sample(accept, alias):
+
+functions/community/motif.py
+def enumerate_subgraph(G, k: int):
+def extend_subgraph(G, Vsubgraph: set, Vextension: set, v: int, k: int,
+def exclusive_neighborhood(G, v: int, vp: set):
+def random_enumerate_subgraph(G, k:int, cut_prob:list):
+def random_extend_subgraph(G, Vsubgraph:set, Vextension:set, v:int, k:int, k_subgraphs:list, cut_prob:list):
+
+functions/community/modularity_max_detection.py
+def greedy_modularity_communities(G, weight='weight'):
+
+functions/structural_holes/strong_connected_component.py
+def strongly_connected_components(G):
+def number_strongly_connected_components(G):
+def condensation(G, scc=None):
+
+utils/misc.py
+def split_len(nodes, step=30000):
+def split(nodes, n):
+def nodes_equal(nodes1, nodes2):
+def edges_equal(edges1, edges2, need_data=True):
+def pairwise(iterable, cyclic=False):
+
+functions/structural_holes/NOBE.py
+def NOBE_SH(G, K, topk):
+def NOBE_GA_SH(G, K, topk):
+def RDS(com, cluster, vector, K):
+
+functions/structural_holes/ICC.py
+def inverse_closeness_centrality(G, v):
+def bounded_inverse_closeness_centrality(G, v, l):
+def Modified_DFS(G, u, V, time, n):
+def approximate_inverse_closeness_centrality(G):
+def ICC(G, k):
+def BICC(G, k, K, l):
+def AP_BICC(G, k, K, l):
+
+functions/community/tests/test_motif.py
+    def setup_class(self):
+    def test_esu(self):
+
+functions/structural_holes/maxBlock.py
+    def __init__(self, N, M):
+    def add(self, x, y):
+def _tarjan(x, dfn, repos, g, fa):
+def _find(x, f, dfn, semi, mi):
+def _dfs(x, tr, ans, desc_set):
+def _get_idom(G, G_tr, node_s, ans_real, desc_set_real):
+def _find_topk_shs_under_l(G, f_set, k, L):
+def _get_estimated_opt(G, f_set, k, c, delta):
+def _find_separation_nodes(G):
+def _find_ancestors_of_node(G, node_t):
+def maxBlock(G, k, f_set=None, delta=1, eps=0.5, c=1, flag_weight=False):
+def maxBlockFast(G, k, f_set=None, L=None, flag_weight=False):
+
+functions/community/modularity.py
+def modularity(G, communities, weight='weight'):
+    def val(u, v):
+
+functions/structural_holes/MaxD.py
+def get_community_kernel(G, C: List[frozenset], weight='weight'):
+def get_structural_holes_MaxD(G, k, C: List[frozenset]):
+def pick_candidates(n, candidates, kernels, save):
+def _init_data():
+def dinic_bfs():
+def dinic_dfs(x, exp):
+def dinic_flow():
+def max_flow(n, kernels, save, prev_flow=None):
+def init_MaxD(_node, _src, _dest):
+def addedge(u, v, c1, c2):
+def build_network(kernels, c, G):
+
+functions/structural_holes/weakTie.py
+def _computeTieStrength(G, node_u, node_v):
+def _computeAllTieStrength(G):
+def _strongly_connected_components(G, threshold):
+def _computeCloseness(G, c, u, threshold, length):
+def _computeScore(G, threshold):
+def weakTie(G, threshold, k):
+def _updateScore(u, G, threshold):
+def _get2hop(G, node):
+def _commonUpdate(G, node_u, node_v, threshold, score_dict):
+def weakTieLocal(G, edges_plus, edges_delete, threshold, score_dict, k):
+
+functions/structural_holes/metrics.py
+def sum_of_shortest_paths(G, S):
+def nodes_of_max_cc_without_shs(G, S):
+    def __init__(self, active, inWeight, threshold):
+def structural_hole_influence_index(G_original,
+def _independent_cascade(G, S, community_label, countIterations,
+def _linear_threshold(G, S, community_label, countIterations, node_label_pair):
+
+functions/structural_holes/HAM.py
+def sym(w):
+def avg_entropy(predicted_labels, actual_labels):
+def load_adj_matrix(G):
+def majority_voting(votes):
+def label_by_neighbors(AdjMat, labels):
+def get_structural_holes_HAM(G, k, c, ground_truth_labels):
+
+functions/structural_holes/evaluation.py
+def mutual_weight(G, u, v, weight=None):
+def normalized_mutual_weight(G, u, v, norm=sum, weight=None):
+def effective_size_parallel(nodes, G, weight):
+def effective_size_borgatti_parallel(nodes, G, weight):
+def redundancy(G, u, v, weight=None):
+def effective_size(G, nodes=None, weight=None, n_workers=None):
+def efficiency(G, nodes=None, weight=None):
+def compute_constraint_of_nodes(nodes, G, weight):
+def constraint(G, nodes=None, weight=None, n_workers=None):
+    def compute_constraint_of_v(v):
+def local_constraint(G, u, v, weight=None):
+def hierarchy_parallel(nodes, G):
+def hierarchy(G, nodes=None, weight=None, n_workers=None):
+
+functions/structural_holes/SHII_metric.py
+    def __init__(self, active, inWeight, threshold):
+def structural_hole_influence_index(G_original,
+def _independent_cascade(G, S, community_label, countIterations,
+def _linear_threshold(G, S, community_label, countIterations, node_label_pair):
+
+utils/convert_to_matrix.py
+def to_numpy_matrix(G, edge_sign=1.0, not_edge_sign=0.0):
+def from_numpy_array(A, parallel_edges=False, create_using=None):
+def to_numpy_array(
+def from_pandas_adjacency(df, create_using=None):
+def from_pandas_edgelist(
+def from_scipy_sparse_matrix(
+def from_scipy_sparse_array(
+def _generate_weighted_edges(A):
+def _csr_gen_triples(A):
+def _csc_gen_triples(A):
+def _coo_gen_triples(A):
+def _dok_gen_triples(A):
+
+utils/type_change.py
+def from_pyGraphviz_agraph(A, create_using=None):
+def to_pyGraphviz_agraph(N):
+
+utils/relabel.py
+def relabel_nodes(G, mapping):
+def _relabel_copy(G, mapping):
+
+utils/convert_class.py
+def convert_graph_class(G, graph_class):
+
+functions/graph_embedding/deepwalk.py
+def deepwalk(G,
+def simulate_walks(G, walk_length, num_walks):
+def _deepwalk_walk(G, walk_length, start_node):
+
+functions/graph_embedding/NOBE.py
+def NOBE(G, K):
+def NOBE_GA(G, K):
+def graph_to_d_atleast2(G):
+def Transition(LG):
+def eigs_nodes(P, K):
+def embedding(V, pair, K, N, dict, G):
+
+utils/mapped_queue.py
+    def __init__(self, data=[]):
+    def __len__(self):
+    def _heapify(self):
+    def push(self, elt):
+    def pop(self):
+    def update(self, elt, new):
+    def remove(self, elt):
+    def _siftup(self, pos):
+    def _siftdown(self, pos):
+
+functions/structural_holes/HIS.py
+def get_structural_holes_HIS(G,
+def initialize(G, C: List[frozenset], S: [tuple], weight='weight'):
+def update_P(G, C, alphas, betas, S, I, H):
+def update_I_H(G, C, S, P, I):
+def is_convergence(G, C, I, I_new, epsilon):
+
+functions/graph_embedding/line.py
+def line_loss(y_true, y_pred):
+def create_model(numNodes, embedding_size, order='second'):
+    def __init__(
+    def reset_training_config(self, batch_size, times):
+    def reset_model(self, opt='adam'):
+    def _gen_sampling_table(self):
+    def batch_iter(self, node2idx):
+    def get_embeddings(self, ):
+    def train(self,
+
+utils/decorators.py
+def only_implemented_for_UnDirected_graph(func):
+def only_implemented_for_Directed_graph(func):
+def not_implemented_for(*graph_types):
+       def sp_function(G):
+       def sp_np_function(G):
+       def sp_np_function(G):
+    def _not_implemented_for(g):
+def open_file(path_arg, mode="r"):
+       def read_function(pathname):
+       def write_function(G, pathname):
+       def write_function(G, pathname="graph.dot"):
+       def write_function(G, pathname="graph.dot"):
+       def another_function(arg, **kwargs):
+      def some_function(arg1, arg2, path=None):
+    def _open_file(path):
+        def show_me_the_money(name, income):
+        def convert_to(currency, which_arg):
+            def _convert(amount):
+        def foo(xlist, y, zlist):
+        def foo(xlist, y, zlist):
+        def foo(xlist, y, zlist):
+        def foo(xlist, y, zlist):
+        def swap(x, y):
+        def foo(a, b, c):
+        def foo(a, b, c):
+        def double(a):
+        def overflow(a, *args):
+        def open_file(fn):
+        def foo(file):
+        def foo(file):
+        def foo(file):
+        def my_closing_decorator(which_arg):
+            def _opener(path):
+        def fancy_reader(file=None):
+    def __init__(self, func, *args, try_finally=False):
+    def _lazy_compile(func):
+    def __call__(self, f):
+            def func(*args, __wrapper=None, **kwargs):
+            def func(*args, __wrapper=None, **kwargs):
+    def _count(cls):
+    def _name(cls, f):
+    def compile(self, f):
+    def assemble(self, f):
+        def get_name(arg, first=True):
+    def signature(cls, f):
+    def _flatten(nestlist, visited):
+    def _indent(*lines):
+def nodes_or_number(which_args):
+       def empty_graph(nodes):
+       def empty_graph(nodes):
+       def grid_2d_graph(m1, m2, periodic=False):
+       def grid_2d_graph(m1, m2, periodic=False):
+       def full_rary_tree(r, n)
+    def _nodes_or_number(n):
+
+functions/graph_embedding/node2vec.py
+def node2vec(G,
+def _get_embedding_result_from_gensim_skipgram_model(G, index_of_node,
+    def change_string_to_node_from_gensim_return_value(value_including_str):
+def simulate_walks(G, walk_length, num_walks, p, q, weight_key=None):
+def _preprocess_transition_probs(G, p, q, weight_key=None):
+def _get_alias_edge(G, src, dst, p, q, weight_key=None):
+def _alias_setup(probs):
+def _node2vec_walk(G, walk_length, start_node, alias_nodes, alias_edges):
+def _alias_draw(J, q):
+def learn_embeddings(walks, dimensions, **skip_gram_params):
+
+utils/index_of_node.py
+def get_relation_of_index_and_node(graph):
+
+functions/structural_holes/AP_Greedy.py
+def common_greedy(G, k, c=1.0, weight='weight'):
+def sort_nodes_by_degree(G, weight='weight'):
+def procedure1(G, c=1.0):
+def _get_spanning_tree_of_component(G):
+    def _plain_dfs(u):
+def _get_num_subtree_nodes(G, root):
+    def _plain_dfs(u):
+def procedure2(G, c=1.0):
+def _get_sum_all_shortest_paths_of_component(G):
+    def _plain_bfs(G, source):
+def AP_Greedy(G, k, c=1.0, weight='weight'):
+def _get_lower_bound_of_ap_nodes(G, c=1.0):
+def _get_upper_bound_of_non_ap_nodes(G, ap: list, c=1.0):
+
+functions/community/LPA.py
+def LPA(G):
+def SLPA(G, T, r):
+def HANP(G, m, delta, threshod=1, hier_open=0, combine_open=0):
+def BMLPA(G, p):
+def RemoveNested(communities):
+def SelectLabels(G, node, label_dict):
+def estimate_stop_cond(G, label_dict):
+def SelectLabels_HANP(G, node, label_dict, score_dict, degrees, m, threshod):
+def HopAttenuation_Hier(G, node, label_dict, node_dict, distance_dict):
+def UpdateScore_Hier(G, node, label_dict, node_dict, distance_dict):
+def UpdateScore(G, node, label_dict, score_dict, delta):
+def estimate_stop_cond_HANP(G, label_dict, score_dict, degrees, m, threshod):
+def CombineNodes(records, G, label_dict, score_dict, node_dict,
+def ShowRecord(records):
+def CheckConnectivity(G, communities):
+def BFS(G, nodes, result):
+def Rough_Cores(G):
+def Normalizer(l):
+def Propagate_bbc(G, x, source, dest, p):
+def Id(l):
+def Id1(x):
+def count(l):
+def mc(cs1, cs2):
+
+functions/graph_embedding/sdne.py
+def get_relation_of_index_and_node(graph):
+def l_2nd(beta):
+    def loss_2nd(y_true, y_pred):
+def l_1st(alpha):
+    def loss_1st(y_true, y_pred):
+def create_model(node_size, hidden_size=[256, 128], l1=1e-5, l2=1e-4):
+    def __init__(
+    def reset_model(self, opt='adam'):
+    def train(self, batch_size=1024, epochs=2, initial_epoch=0, verbose=1):
+    def evaluate(self, ):
+    def get_embeddings(self):
+    def _create_A_L(self, graph, node2idx):
+
+functions/components/ego_betweenness.py
+def ego_betweenness(G, node):
+
+functions/components/biconnected.py
+def is_biconnected(G):
+def biconnected_components(G):
+def generator_biconnected_components_nodes(G):
+def generator_biconnected_components_edges(G):
+def generator_articulation_points(G):
+def _biconnected_dfs_record_edges(G, need_components=True):
+def _biconnected_dfs_record_nodes(G, need_components=True):
+
+functions/components/connected.py
+def is_connected(G):
+def number_connected_components(G):
+def connected_components(G):
+def _generator_connected_components(G):
+def connected_component_of_node(G, node):
+def _plain_bfs(G, source):
+
+functions/graph_generator/RandomNetwork.py
+def erdos_renyi_M(n, edge, directed=False, FilePath=None):
+def erdos_renyi_P(n, p, directed=False, FilePath=None):
+def fast_erdos_renyi_P(n, p, directed=False, FilePath=None):
+def WS_Random(n, k, p, FilePath=None):
+def writeRandomNetworkToFile(n, adjacent, FilePath):
+
+functions/graph_generator/classic.py
+def empty_graph(n=0, create_using=None, default=Graph):
+def path_graph(n, create_using=None):
+def complete_graph(n, create_using=None):
+
+functions/centrality/degree.py
+def degree_centrality(G):
+def in_degree_centrality(G):
+def out_degree_centrality(G):
+
+functions/centrality/clossness.py
+def closeness_centrality_parallel(nodes, G, path_length):
+def closeness_centrality(G, weight=None, n_workers=None):
+
+functions/centrality/betweenness.py
+def betweenness_centrality_parallel(nodes, G, path_length, accumulate):
+def betweenness_centrality(G,
+def _rescale(betweenness, n, normalized, directed=False, endpoints=False):
+def _single_source_bfs_path(G, source):
+def _single_source_dijkstra_path(G, source, weight="weight"):
+def _accumulate_endpoints(betweenness, S, P, sigma, s):
+def _accumulate_basic(betweenness, S, P, sigma, s):
+
+functions/path/path.py
+def Dijkstra(G, node):
+def Floyd(G):
+def Prim(G):
+def Kruskal(G):
+def single_source_bfs(G, source, target=None):
+def _single_source_bfs(adj, firstlevel, target=None):
+def single_source_dijkstra(G, source, weight="weight", target=None):
+def multi_source_dijkstra(G, sources, weight="weight", target=None):
+def _dijkstra_multisource(G, sources, weight="weight", target=None):
+
+functions/not_sorted/pagerank.py
+def pagerank(G, alpha=0.85):
+def google_matrix(G, alpha):
+
+functions/drawing/positioning.py
+def random_position(G, center=None, dim=2, random_seed=None):
+def circular_position(G, center=None, scale=1):
+def shell_position(G, nlist=None, scale=1, center=None):
+def _get_center(center, dim):
+def rescale_position(pos, scale=1):
+def kamada_kawai_layout(G,
+def _kamada_kawai_solve(dist_mtx, pos_arr, dim):
+def _kamada_kawai_costfn(pos_vec, np, invdist, meanweight, dim):
+
+functions/centrality/flowbetweenness.py
+def flowbetweenness_centrality(G):
+def NumberOfFlow(G):
+def edmonds_karp(G, source, sink):
+def bfs(G, source, sink, parent, adj):
+
+functions/drawing/plot.py
+def plot_Followers(G, SHS):
+def plot_Connected_Communities(G, SHS):
+def plot_Betweenness_Centrality(G, SHS):
+def plot_Neighborhood_Followers(G, SHS):
+
+functions/not_sorted/laplacian.py
+def laplacian(G, n_workers=None):
+def initialize_parallel(nodes, G, adj):
+def laplacian_parallel(nodes, G, X, W, adj, ELG):
+def sort(data):
+def output(data, path):
+
+functions/drawing/drawing.py
+def draw_SHS_center(G, SHS, rate=1, style="side"):
+def draw_SHS_center_kk(G, SHS, rate=1, style="side"):
+def draw_kamada_kawai(G, rate=1, style="side"):
+
+datasets/get_sample_graph.py
+def get_graph_karateclub():
+def get_graph_blogcatalog():
+    def sparse2graph(x):
+def get_graph_youtube():
+def get_graph_flickr():
+def _show_progress(block_num, block_size, total_size):
+
+tests/test_convert.py
+    def setup_method(self):
+    def assert_equal(self, G1, G2):
+    def identity_conversion(self, G, A, create_using):
+    def test_identity_graph_array(self):
+    def setup_method(self):
+    def assert_equal(self, G1, G2):
+    def test_from_edgelist_multi_attr(self):
+    def test_from_adjacency(self):
+    def setup_method(self):
+    def assert_equal(self, G1, G2):
+    def test_from_scipy(self):
+
+functions/not_sorted/mst.py
+def boruvka_mst_edges(G,
+    def best_edge(component):
+def kruskal_mst_edges(G,
+    def filter_nan_edges(edges=edges, weight=weight):
+def prim_mst_edges(G, minimum, weight="weight", data=True, ignore_nan=False):
+def minimum_spanning_edges(G,
+def maximum_spanning_edges(G,
+def minimum_spanning_tree(G,
+def maximum_spanning_tree(G,
+def edge_boundary(G, nbunch1, nbunch2=None, data=False, default=None):
+    def __init__(self, elements=None):
+    def __getitem__(self, object):
+    def __iter__(self):
+    def to_sets(self):
+    def union(self, *objects):
+
+convert.py
+def to_easygraph_graph(data, create_using=None, multigraph_input=False):
+def from_dict_of_lists(d, create_using=None):
+def from_dict_of_dicts(d, create_using=None, multigraph_input=False):
+def from_edgelist(edgelist, create_using=None):
+
+functions/not_sorted/bridges.py
+def bridges(G, root=None):
+def has_bridges(G, root=None):
+def chain_decomposition(G, root=None):
+    def _dfs_cycle_forest(G, root=None):
+    def _build_chain(G, u, v, visited):
+def dfs_labeled_edges(G, source=None, depth_limit=None):
+
+readwrite/gml.py
+def escape(text):
+    def fixup(m):
+def unescape(text):
+    def fixup(m):
+def literal_destringizer(rep):
+def parse_gml(lines, label="label", destringizer=None):
+    def decode_line(line):
+    def filter_lines(lines):
+def parse_gml_lines(lines, label, destringizer):
+    def tokenize():
+    def unexpected(curr_token, expected):
+    def consume(curr_token, category, expected):
+    def parse_dict(curr_token):
+    def parse_kv(curr_token):
+        def clean_dict_value(value):
+    def parse_graph():
+    def pop_attr(dct, category, attr, i):
+def generate_gml(G, stringizer=None):
+    def stringize(key, value, ignored_keys, indent, in_list=False):
+def read_gml(path, label="label", destringizer=None):
+    def filter_lines(lines):
+def write_gml(G, path, stringizer=None):
+def literal_stringizer(value):
+    def stringize(value):
+
+functions/not_sorted/tests/test_pagerank.py
+    def setup_method(self):
+    def test_pagerank(self):
+
+classes/graphviews.py
+def reverse_view(G):
+
+classes/directed_multigraph.py
+    def __init__(self,
+    def add_edge(self, u_for_edge, v_for_edge, key=None, **attr):
+    def remove_edge(self, u, v, key=None):
+    def edges(self):
+    def in_edges(self):
+    def degree(self, weight='weight'):
+    def in_degree(self, weight='weight'):
+    def out_degree(self, weight='weight'):
+    def is_multigraph(self):
+    def is_directed(self):
+    def to_undirected(self, reciprocal=False):
+    def reverse(self, copy=True):
+
+classes/directed_graph.py
+    def __init__(self, incoming_graph_data=None, **graph_attr):
+    def __iter__(self):
+    def __len__(self):
+    def __contains__(self, node):
+    def __getitem__(self, node):
+    def adj(self):
+    def nodes(self):
+    def edges(self):
+    def name(self):
+    def name(self, s):
+    def out_degree(self, weight='weight'):
+    def in_degree(self, weight='weight'):
+    def degree(self, weight='weight'):
+    def size(self, weight=None):
+    def neighbors(self, node):
+    def predecessors(self, node):
+    def all_neighbors(self, node):
+    def add_node(self, node_for_adding, **node_attr):
+    def add_nodes(self, nodes_for_adding: list, nodes_attr: List[Dict] = []):
+    def add_nodes_from(self, nodes_for_adding, **attr):
+    def _add_one_node(self, one_node_for_adding, node_attr: dict = {}):
+    def add_edge(self, u_of_edge, v_of_edge, **edge_attr):
+    def add_weighted_edge(self, u_of_edge, v_of_edge, weight):
+    def add_edges(self, edges_for_adding, edges_attr: List[Dict] = []):
+    def add_edges_from(self, ebunch_to_add, **attr):
+    def add_edges_from_file(self, file, weighted=False):
+    def _add_one_edge(self, u_of_edge, v_of_edge, edge_attr: dict = {}):
+    def remove_node(self, node_to_remove):
+    def remove_nodes(self, nodes_to_remove: list):
+    def remove_edge(self, u, v):
+    def remove_edges(self, edges_to_remove: [tuple]):
+    def remove_edges_from(self, ebunch):
+    def has_node(self, node):
+    def has_edge(self, u, v):
+    def number_of_nodes(self):
+    def number_of_edges(self):
+    def is_directed(self):
+    def is_multigraph(self):
+    def copy(self):
+    def nodes_subgraph(self, from_nodes: list):
+    def ego_subgraph(self, center):
+    def to_index_node_graph(self, begin_index=0):
+
+readwrite/edgelist.py
+def parse_edgelist(lines,
+
+classes/operation.py
+def set_edge_attributes(G, values, name=None):
+def add_path(G_to_add_to, nodes_for_path, **attr):
+def set_node_attributes(G, values, name=None):
+def topological_generations(G):
+def topological_sort(G):
+def number_of_selfloops(G):
+def selfloop_edges(G, data=False, keys=False, default=None):
+
+classes/multigraph.py
+    def __init__(self,
+    def new_edge_key(self, u, v):
+    def add_edge(self, u_for_edge, v_for_edge, key=None, **attr):
+    def add_edges_from(self, ebunch_to_add, **attr):
+    def remove_edge(self, u, v, key=None):
+    def remove_edges_from(self, ebunch):
+    def has_edge(self, u, v, key=None):
+    def edges(self):
+    def get_edge_data(self, u, v, key=None, default=None):
+    def degree(self, weight='weight'):
+    def is_multigraph(self):
+    def is_directed(self):
+    def copy(self):
+    def to_directed(self):
+    def number_of_edges(self, u=None, v=None):
+
+readwrite/pickle.py
+def read_pickle(file_name):
+def write_pickle(file_name, obj):
+
+classes/tests/test_multigraph.py
+    def setup_method(self):
+    def test_data_input(self):
+    def test_has_edge(self):
+    def test_get_edge_data(self):
+    def test_data_multigraph_input(self):
+    def test_remove_node(self):
+
+readwrite/graphml.py
+def write_graphml_xml(
+def write_graphml_lxml(
+def generate_graphml(
+def read_graphml(path,
+def parse_graphml(graphml_string,
+    def construct_types(self):
+    def get_xml_type(self, key):
+    def __init__(
+    def __str__(self):
+    def attr_type(self, name, scope, value):
+    def get_key(self, name, attr_type, scope, default):
+    def add_data(self, name, element_type, value, scope="all", default=None):
+    def add_attributes(self, scope, xml_obj, data, default):
+    def add_nodes(self, G, graph_element):
+    def add_edges(self, G, graph_element):
+    def add_graph_element(self, G):
+    def add_graphs(self, graph_list):
+    def dump(self, stream):
+    def indent(self, elem, level=0):
+    def __init__(self, xml, prettyprint):
+    def append(self, element):
+    def __init__(
+    def add_graph_element(self, G):
+    def add_attributes(self, scope, xml_obj, data, default):
+    def __str__(self):
+    def dump(self):
+    def __init__(self,
+    def __call__(self, path=None, string=None):
+    def make_graph(self, graph_xml, graphml_keys, defaults, G=None):
+    def add_node(self, G, node_xml, graphml_keys, defaults):
+    def add_edge(self, G, edge_element, graphml_keys):
+    def decode_data_elements(self, graphml_keys, obj_xml):
+    def find_graphml_keys(self, graph_element):
+
+readwrite/pajek.py
+def generate_pajek(G):
+def write_pajek(G, path, encoding="UTF-8"):
+def read_pajek(path):
+def parse_pajek(lines):
+def make_qstr(t):
+
+classes/tests/test_operation.py
+def test_selfloops(graph_type):
+
+classes/graph.py
+    def __init__(self, incoming_graph_data=None, **graph_attr):
+    def __iter__(self):
+    def __len__(self):
+    def __contains__(self, node):
+    def __getitem__(self, node):
+    def adj(self):
+    def nodes(self):
+    def edges(self):
+    def name(self):
+    def name(self, s):
+    def degree(self, weight='weight'):
+    def order(self):
+    def size(self, weight=None):
+    def neighbors(self, node):
+    def add_node(self, node_for_adding, **node_attr):
+    def add_nodes(self, nodes_for_adding: list, nodes_attr: List[Dict] = []):
+    def add_nodes_from(self, nodes_for_adding, **attr):
+    def _add_one_node(self, one_node_for_adding, node_attr: dict = {}):
+    def add_edge(self, u_of_edge, v_of_edge, **edge_attr):
+    def add_weighted_edge(self, u_of_edge, v_of_edge, weight):
+    def add_edges(self, edges_for_adding, edges_attr: List[Dict] = []):
+    def add_edges_from(self, ebunch_to_add, **attr):
+    def add_edges_from_file(self, file, weighted=False):
+    def _add_one_edge(self, u_of_edge, v_of_edge, edge_attr: dict = {}):
+    def remove_node(self, node_to_remove):
+    def remove_nodes(self, nodes_to_remove: list):
+    def remove_edge(self, u, v):
+    def remove_edges(self, edges_to_remove: [tuple]):
+    def has_node(self, node):
+    def has_edge(self, u, v):
+    def number_of_nodes(self):
+    def number_of_edges(self):
+    def is_directed(self):
+    def is_multigraph(self):
+    def copy(self):
+    def nodes_subgraph(self, from_nodes: list):
+    def ego_subgraph(self, center):
+    def to_index_node_graph(self, begin_index=0):
+        def __init__(self, **graph_attr):
+
+readwrite/graphviz.py
+def from_agraph(A, create_using=None):
+def to_agraph(N):
+def write_dot(G, path):
+def read_dot(path):
+
+readwrite/ucinet.py
+def generate_ucinet(G):
+def read_ucinet(path, encoding='UTF-8'):
+def write_ucinet(G, path, encoding='UTF-8'):
+def parse_ucinet(lines):
+def get_param(regex, token, lines):
+
+readwrite/gexf.py
+def write_gexf(G,
+def generate_gexf(G, encoding="utf-8", prettyprint=True, version="1.2draft"):
+def read_gexf(path, node_type=None, relabel=False, version="1.2draft"):
+    def construct_types(self):
+    def set_version(self, version):
+    def __init__(self,
+    def __str__(self):
+    def add_graph(self, G):
+    def add_nodes(self, G, graph_element):
+    def get_attr_id(self, title, attr_type, edge_or_node, default, mode):
+    def add_edges(self, G, graph_element):
+        def edge_key_data(G):
+    def add_attributes(self, node_or_edge, xml_obj, data, default):
+    def add_viz(self, element, node_data):
+    def add_parents(self, node_element, node_data):
+    def add_slices(self, node_or_edge_element, node_or_edge_data):
+    def add_spells(self, node_or_edge_element, node_or_edge_data):
+    def alter_graph_mode_timeformat(self, start_or_end):
+    def write(self, fh):
+    def indent(self, elem, level=0):
+    def __init__(self, node_type=None, version="1.2draft"):
+    def __call__(self, stream):
+    def make_graph(self, graph_xml):
+    def add_node(self, G, node_xml, node_attr, node_pid=None):
+    def add_start_end(self, data, xml):
+    def add_viz(self, data, node_xml):
+    def add_parents(self, data, node_xml):
+    def add_slices(self, data, node_or_edge_xml):
+    def add_spells(self, data, node_or_edge_xml):
+    def add_edge(self, G, edge_element, edge_attr):
+    def decode_attr_elements(self, gexf_keys, obj_xml):
+    def find_gexf_attributes(self, attributes_element):
+def relabel_gexf_graph(G):
+
+readwrite/tests/test_ucinet.py
+def filterEdges(edges):
+    def setup_class(self):
+    def test_generate_ucinet(self):
+    def test_parse_ucinet(self):
+    def test_parse_ucinet_labels(self):
+    def test_parse_ucinet_nodelist1(self):
+    def test_parse_ucinet_nodelist1_labels(self):
+    def test_read_ucinet(self):
+    def test_write_ucinet(self):
+    def test_parse_ucinet_edgelist1(self):
+
+readwrite/tests/test_gexf.py
+    def setup_class(cls):
+    def test_read_simple_directed_graphml(self):
+    def test_write_read_simple_directed_graphml(self):
+    def test_read_simple_undirected_graphml(self):
+    def test_read_attribute_graphml(self):
+    def test_directed_edge_in_undirected(self):
+    def test_undirected_edge_in_directed(self):
+    def test_key_raises(self):
+    def test_relabel(self):
+    def test_default_attribute(self):
+    def test_serialize_ints_to_strings(self):
+    def test_edge_id_construct(self):
+    def test_numpy_type(self):
+    def test_bool(self):
+    def test_specials(self):
+    def test_simple_list(self):
+    def test_dynamic_mode(self):
+    def test_slice_and_spell(self):
+    def test_add_parent(self):
+
+readwrite/tests/test_graphml.py
+    def setup_class(cls):
+    def test_read_simple_directed_graphml(self):
+    def test_read_simple_undirected_graphml(self):
+    def test_read_undirected_multigraph_graphml(self):
+    def test_read_undirected_multigraph_no_multiedge_graphml(self):
+    def test_read_undirected_multigraph_only_ids_for_multiedges_graphml(self):
+    def test_read_attribute_graphml(self):
+    def test_node_default_attribute_graphml(self):
+    def test_directed_edge_in_undirected(self):
+    def test_undirected_edge_in_directed(self):
+    def test_key_raise(self):
+    def test_hyperedge_raise(self):
+    def test_multigraph_keys(self):
+    def test_preserve_multi_edge_data(self):
+    def test_yfiles_extension(self):
+    def test_bool(self):
+    def test_graphml_header_line(self):
+    def test_read_attributes_with_groups(self):
+    def test_long_attribute_type(self):
+    def setup_class(cls):
+    def test_write_interface(self):
+    def test_write_read_simple_directed_graphml(self):
+    def test_GraphMLWriter_add_graphs(self):
+    def test_write_read_simple_no_prettyprint(self):
+    def test_write_read_attribute_named_key_ids_graphml(self):
+    def test_write_read_attribute_numeric_type_graphml(self):
+    def test_more_multigraph_keys(self):
+    def test_default_attribute(self):
+    def test_mixed_type_attributes(self):
+    def test_str_number_mixed_type_attributes(self):
+    def test_mixed_int_type_number_attributes(self):
+    def test_numpy_float(self):
+    def test_multigraph_to_graph(self):
+    def test_write_generate_edge_id_from_attribute(self):
+    def test_multigraph_write_generate_edge_id_from_attribute(self):
+    def test_numpy_float64(self):
+    def test_numpy_float32(self):
+    def test_numpy_float64_inference(self):
+    def test_unicode_attributes(self):
+    def test_unicode_escape(self):
+
+readwrite/tests/test_graphviz.py
+    def build_graph(self, G):
+    def assert_equal(self, G1, G2):
+    def agraph_checks(self, G):
+    def test_from_agraph_name(self):
+    def test_undirected(self):
+
+readwrite/tests/test_pajek.py
+    def setup_class(cls):
+    def teardown_class(cls):
+    def test_parse_pajek_simple(self):
+    def test_parse_pajek(self):
+    def test_parse_pajek_mat(self):
+    def test_read_pajek(self):
+    def test_write_pajek(self):
+    def test_ignored_attribute(self):
+    def test_noname(self):
+    def test_unicode(self):
+
+readwrite/tests/test_pickle.py
+    def setup_class(cls):
+    def teardown_class(cls):
+    def test_read_pickle(self):
+    def test_write_pickle(self):
+
+readwrite/tests/test_gml.py
+    def setup_class(cls):
+    def test_parse_gml_cytoscape_bug(self):
+    def test_parse_gml(self):
+    def test_read_gml(self):
+    def test_labels_are_strings(self):
+    def test_relabel_duplicate(self):
+    def test_quotes(self):
+    def test_unicode_node(self):
+    def test_float_label(self):
+    def test_name(self):
+    def test_graph_types(self):
+    def test_data_types(self):
+    def test_escape_unescape(self):
+    def test_exceptions(self):
+        def assert_parse_error(gml):
+        def assert_generate_error(*args, **kwargs):
+    def test_label_kwarg(self):
+    def test_outofrange_integers(self):
+def byte_file():
+    def test_writing_graph_with_multi_element_property_list(self):
+    def test_writing_graph_with_one_element_property_list(self):
+    def test_reading_graph_with_list_property(self):
+    def test_reading_graph_with_single_element_list_property(self):
