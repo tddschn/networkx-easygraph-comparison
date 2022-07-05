@@ -10,14 +10,30 @@ EasyGraph mentioned in this article refers to v0.2a38, unless specified otherwis
 
 - [A Rough Comparison of the two Python Graph Libraries NetworkX and EasyGraph](#a-rough-comparison-of-the-two-python-graph-libraries-networkx-and-easygraph)
   - [Overview](#overview)
+  - [Classes and Functions](#classes-and-functions)
   - [Dependencies](#dependencies)
+  - [Graph Algorithms](#graph-algorithms)
   - [Graph I/O](#graph-io)
 
 ## Overview
 
+NetworkX is has [a LOT more](#classes-and-functions) [features](#graph-algorithms) EasyGraph, but lacks SHS detection features.
+
+It has lots of contributors, and is used by a lot of people.
+
+EasyGraph is new, its development and code base is quite messy and not governed by a written rule.
+
+The documentation sucks, but I heard that they're working on it.
+
+EG devs say they have better support for reading from and writing to a wide range of graph formats, but that's not true. NetworkX still wins in that respect.
+
 ![](./images/networkx-overview.png)
 
 ![](./images/Easy-Graph-overview.png)
+
+## Classes and Functions
+
+See [Symbol Comparison](./symbol-comparison.md)
 
 ## Dependencies
 
@@ -43,6 +59,299 @@ The utility functions aren't really necessary and could be moved to optional dep
 
 
 <!-- cSpell:enable -->
+
+## Graph Algorithms
+
+<details>
+  <summary>networkx/algorithms</summary>
+  
+  ```
+networkx/algorithms
+├── __init__.py
+├── approximation
+│  ├── __init__.py
+│  ├── clique.py
+│  ├── clustering_coefficient.py
+│  ├── connectivity.py
+│  ├── distance_measures.py
+│  ├── dominating_set.py
+│  ├── kcomponents.py
+│  ├── matching.py
+│  ├── maxcut.py
+│  ├── ramsey.py
+│  ├── steinertree.py
+│  ├── traveling_salesman.py
+│  ├── treewidth.py
+│  └── vertex_cover.py
+├── assortativity
+│  ├── __init__.py
+│  ├── connectivity.py
+│  ├── correlation.py
+│  ├── mixing.py
+│  ├── neighbor_degree.py
+│  └── pairs.py
+├── asteroidal.py
+├── bipartite
+│  ├── __init__.py
+│  ├── basic.py
+│  ├── centrality.py
+│  ├── cluster.py
+│  ├── covering.py
+│  ├── edgelist.py
+│  ├── generators.py
+│  ├── matching.py
+│  ├── matrix.py
+│  ├── projection.py
+│  ├── redundancy.py
+│  └── spectral.py
+├── boundary.py
+├── bridges.py
+├── centrality
+│  ├── __init__.py
+│  ├── betweenness.py
+│  ├── betweenness_subset.py
+│  ├── closeness.py
+│  ├── current_flow_betweenness.py
+│  ├── current_flow_betweenness_subset.py
+│  ├── current_flow_closeness.py
+│  ├── degree_alg.py
+│  ├── dispersion.py
+│  ├── eigenvector.py
+│  ├── flow_matrix.py
+│  ├── group.py
+│  ├── harmonic.py
+│  ├── katz.py
+│  ├── load.py
+│  ├── percolation.py
+│  ├── reaching.py
+│  ├── second_order.py
+│  ├── subgraph_alg.py
+│  ├── trophic.py
+│  └── voterank_alg.py
+├── chains.py
+├── chordal.py
+├── clique.py
+├── cluster.py
+├── coloring
+│  ├── __init__.py
+│  ├── equitable_coloring.py
+│  └── greedy_coloring.py
+├── communicability_alg.py
+├── community
+│  ├── __init__.py
+│  ├── asyn_fluid.py
+│  ├── centrality.py
+│  ├── community_utils.py
+│  ├── kclique.py
+│  ├── kernighan_lin.py
+│  ├── label_propagation.py
+│  ├── louvain.py
+│  ├── lukes.py
+│  ├── modularity_max.py
+│  └── quality.py
+├── components
+│  ├── __init__.py
+│  ├── attracting.py
+│  ├── biconnected.py
+│  ├── connected.py
+│  ├── semiconnected.py
+│  ├── strongly_connected.py
+│  └── weakly_connected.py
+├── connectivity
+│  ├── __init__.py
+│  ├── connectivity.py
+│  ├── cuts.py
+│  ├── disjoint_paths.py
+│  ├── edge_augmentation.py
+│  ├── edge_kcomponents.py
+│  ├── kcomponents.py
+│  ├── kcutsets.py
+│  ├── stoerwagner.py
+│  └── utils.py
+├── core.py
+├── covering.py
+├── cuts.py
+├── cycles.py
+├── d_separation.py
+├── dag.py
+├── distance_measures.py
+├── distance_regular.py
+├── dominance.py
+├── dominating.py
+├── efficiency_measures.py
+├── euler.py
+├── flow
+│  ├── __init__.py
+│  ├── boykovkolmogorov.py
+│  ├── capacityscaling.py
+│  ├── dinitz_alg.py
+│  ├── edmondskarp.py
+│  ├── gomory_hu.py
+│  ├── maxflow.py
+│  ├── mincost.py
+│  ├── networksimplex.py
+│  ├── preflowpush.py
+│  ├── shortestaugmentingpath.py
+│  └── utils.py
+├── graph_hashing.py
+├── graphical.py
+├── hierarchy.py
+├── hybrid.py
+├── isolate.py
+├── isomorphism
+│  ├── __init__.py
+│  ├── ismags.py
+│  ├── isomorph.py
+│  ├── isomorphvf2.py
+│  ├── matchhelpers.py
+│  ├── temporalisomorphvf2.py
+│  ├── tree_isomorphism.py
+│  └── vf2userfunc.py
+├── link_analysis
+│  ├── __init__.py
+│  ├── hits_alg.py
+│  └── pagerank_alg.py
+├── link_prediction.py
+├── lowest_common_ancestors.py
+├── matching.py
+├── minors
+│  ├── __init__.py
+│  └── contraction.py
+├── mis.py
+├── moral.py
+├── node_classification
+│  ├── __init__.py
+│  ├── hmn.py
+│  ├── lgc.py
+│  └── utils.py
+├── non_randomness.py
+├── operators
+│  ├── __init__.py
+│  ├── all.py
+│  ├── binary.py
+│  ├── product.py
+│  └── unary.py
+├── planar_drawing.py
+├── planarity.py
+├── polynomials.py
+├── reciprocity.py
+├── regular.py
+├── richclub.py
+├── shortest_paths
+│  ├── __init__.py
+│  ├── astar.py
+│  ├── dense.py
+│  ├── generic.py
+│  ├── unweighted.py
+│  └── weighted.py
+├── similarity.py
+├── simple_paths.py
+├── smallworld.py
+├── smetric.py
+├── sparsifiers.py
+├── structuralholes.py
+├── summarization.py
+├── swap.py
+├── threshold.py
+├── tournament.py
+├── traversal
+│  ├── __init__.py
+│  ├── beamsearch.py
+│  ├── breadth_first_search.py
+│  ├── depth_first_search.py
+│  ├── edgebfs.py
+│  └── edgedfs.py
+├── tree
+│  ├── __init__.py
+│  ├── branchings.py
+│  ├── coding.py
+│  ├── decomposition.py
+│  ├── mst.py
+│  ├── operations.py
+│  └── recognition.py
+├── triads.py
+├── vitality.py
+├── voronoi.py
+└── wiener.py
+
+  ```
+<!-- Two important rules:
+
+Make sure you have an empty line after the closing </summary> tag, otherwise the markdown/code blocks won't show correctly.
+Make sure you have an empty line after the closing </details> tag if you have multiple collapsible sections. -->
+</details>
+
+
+<details>
+  <summary>easygraph/functions</summary>
+  
+  ```
+functions
+├── __init__.py
+├── centrality
+│  ├── __init__.py
+│  ├── betweenness.py
+│  ├── clossness.py
+│  ├── degree.py
+│  └── flowbetweenness.py
+├── community
+│  ├── __init__.py
+│  ├── LPA.py
+│  ├── modularity.py
+│  ├── modularity_max_detection.py
+│  └── motif.py
+├── components
+│  ├── __init__.py
+│  ├── biconnected.py
+│  ├── connected.py
+│  └── ego_betweenness.py
+├── drawing
+│  ├── __init__.py
+│  ├── drawing.py
+│  ├── plot.py
+│  └── positioning.py
+├── graph_embedding
+│  ├── __init__.py
+│  ├── deepwalk.py
+│  ├── line.py
+│  ├── NOBE.py
+│  ├── node2vec.py
+│  └── sdne.py
+├── graph_generator
+│  ├── __init__.py
+│  ├── classic.py
+│  └── RandomNetwork.py
+├── not_sorted
+│  ├── __init__.py
+│  ├── bridges.py
+│  ├── cluster.py
+│  ├── laplacian.py
+│  ├── mst.py
+│  └── pagerank.py
+├── path
+│  ├── __init__.py
+│  └── path.py
+└── structural_holes
+   ├── __init__.py
+   ├── AP_Greedy.py
+   ├── evaluation.py
+   ├── HAM.py
+   ├── HIS.py
+   ├── ICC.py
+   ├── maxBlock.py
+   ├── MaxD.py
+   ├── metrics.py
+   ├── NOBE.py
+   ├── SHII_metric.py
+   ├── strong_connected_component.py
+   └── weakTie.py
+
+  ```
+<!-- Two important rules:
+
+Make sure you have an empty line after the closing </summary> tag, otherwise the markdown/code blocks won't show correctly.
+Make sure you have an empty line after the closing </details> tag if you have multiple collapsible sections. -->
+</details>
 
 ## Graph I/O
 
