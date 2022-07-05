@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "networkx-easygraph-comparison"
+version = "0.1.0"
+description = ""
+authors = ["Teddy Xinyuan Chen <45612704+tddschn@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "networkx_easygraph_comparison"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.10"
+networkx = "^2.8.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
