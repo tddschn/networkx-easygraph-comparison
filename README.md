@@ -12,18 +12,27 @@ EasyGraph mentioned in this article refers to v0.2a38, unless specified otherwis
   - [Overview](#overview)
   - [Classes and Functions](#classes-and-functions)
   - [Dependencies](#dependencies)
+  - [Graph classes](#graph-classes)
+    - [NetworkX](#networkx)
+    - [EasyGraph](#easygraph)
   - [Graph Algorithms](#graph-algorithms)
   - [Graph I/O](#graph-io)
 
 ## Overview
 
-NetworkX is has [a LOT more](#classes-and-functions) [features](#graph-algorithms) EasyGraph, but lacks SHS detection features.
+NetworkX has [a LOT more](#classes-and-functions) [features](#graph-algorithms) EasyGraph, but lacks SHS detection features. It's first commit was in 2005.
 
-It has lots of contributors, and is used by a lot of people.
+It has lots of contributors and is still being actively developed, and is [used by a lot of people](https://github.com/networkx/networkx/network/dependents) (107,831 Repositories, 4,003 Packages).
 
-EasyGraph is new, its development and code base is quite messy and not governed by a written rule.
+[NetworkX GitHub Pulse](https://github.com/networkx/networkx/pulse)
 
-The documentation sucks, but I heard that they're working on it.
+EasyGraph is developed by Fudan University students, and its development and code base is quite messy and not governed by a written rule. The first commit was in 2020.
+
+EasyGraph GitHub Pulse [(last week)](https://github.com/easy-graph/Easy-Graph/pulse), [(last month)](https://github.com/easy-graph/Easy-Graph/pulse/monthly), and the only project that depends on EasyGraph is my [easygraph-test](https://github.com/easy-graph/Easy-Graph/network/dependents) repository.
+
+
+The [documentation](https://easy-graph.github.io/) sucks, the [tutorial code](https://easy-graph.github.io/tutorial.html) doesn't work as advertised (cuz it's outdated), and the API reference only contains [class and function signatures](https://easy-graph.github.io/reference/structural_hole_spanners.html).  
+It's likely you'd find the source code to be more useful than the documentation.
 
 EG devs say they have better support for reading from and writing to a wide range of graph formats, but that's not true. NetworkX still wins in that respect.
 
@@ -36,6 +45,10 @@ EG devs say they have better support for reading from and writing to a wide rang
 See [Symbol Comparison](./symbol-comparison.md)
 
 ## Dependencies
+
+[NetworkX Dependency Graph](https://github.com/networkx/networkx/network/dependencies)
+
+[EasyGraph Dependency Graph](https://github.com/easy-graph/Easy-Graph/network/dependencies)
 
 NetworkX, surprisingly, has no dependencies, only some optional dependencies, specified in its `requirements` directory.
 
@@ -59,6 +72,37 @@ The utility functions aren't really necessary and could be moved to optional dep
 
 
 <!-- cSpell:enable -->
+
+## Graph classes
+
+
+Both libraries have classes for `undirected` and `directed` graphs and multigraphs (parallel edges allowed).
+
+### NetworkX
+
+NetworkX also supports [Ordered Graphs](https://networkx.org/documentation/stable/reference/classes/ordered.html) which give a consistent order for reporting of nodes and edges, but it's being deprecated.
+
+NetworkX graphs' `edges` attribute (or should I say, property) returns data of type `EdgeView`,
+
+the library also has `DegreeView, EdgeView, NodeView, AdjacencyView` view classes and `FilterAdjacency, FilterMultiInner, FilterMultiAdjacency` filter classes defined.
+
+The view classes are quiet sophisticated and define dunder methods like `__len__`, `__iter__` and `__contains__`, and provide Pythonic interface for the users.
+
+`classes/filters.py` defines `[ "no_filter", "hide_nodes", "hide_edges", "hide_multiedges", "hide_diedges", "hide_multidiedges", "show_nodes", "show_edges", "show_multiedges", "show_diedges", "show_multidiedges"]`, which provides toggles for graph instances so that users can choose what kinds of nodes / edges to receive.
+
+`classes/function.py` defines common functions (`neighbors`, `density`, `is_directed`, `to_directed` etc) that operate on the view classes mentioned above.
+
+### EasyGraph
+
+The undirected graph class `Graph` has a C++ counter part `GraphC`, which is still quite [buggy](https://github.com/tddschn/easygraph-test).
+
+The `operations.py`, like `function.py` in NetworkX, implements a small number of common graph operations.
+
+There's no view or filter classes, just the four graph classes. 
+
+The `edges` property returns a list of edges.
+
+Dunder methods are only defined directly on the graph classes. (NetworkX does this too)
 
 ## Graph Algorithms
 
