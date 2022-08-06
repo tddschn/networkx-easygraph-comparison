@@ -15,6 +15,7 @@ EasyGraph mentioned in this article refers to v0.2a38, unless specified otherwis
     - [EasyGraph](#easygraph)
   - [Graph Algorithms](#graph-algorithms)
   - [Graph I/O](#graph-io)
+  - [Useful links](#useful-links)
 
 ## Overview
 
@@ -400,3 +401,11 @@ Make sure you have an empty line after the closing </details> tag if you have mu
 ![](images/networkx-readwrite.png)
 
 ![](images/eg-readwrite.png)
+
+## Useful links
+
+- [EasyGraph](https://github.com/easy-graph/Easy-Graph)
+- [NetworkX](https://networkx.org)
+- [easygraph-bench](https://github.com/tddschn/easygraph-bench)
+    Benchmarking code and results of easygraph (Python / C++) and networkx
+
