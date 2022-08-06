@@ -1,7 +1,5 @@
 # A Rough Comparison of the two Python Graph Libraries NetworkX and EasyGraph
 
-**A work in progress**
-
 [NetworkX](https://networkx.org)
 
 [EasyGraph](https://github.com/easy-graph/Easy-Graph)
