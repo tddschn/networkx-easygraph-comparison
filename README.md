@@ -16,6 +16,7 @@ EasyGraph mentioned in this article refers to v0.2a38, unless specified otherwis
   - [Graph Algorithms](#graph-algorithms)
   - [Graph I/O](#graph-io)
   - [Useful links](#useful-links)
+  - [Other Graph Libraries](#other-graph-libraries)
 
 ## Overview
 
@@ -409,3 +410,6 @@ Make sure you have an empty line after the closing </details> tag if you have mu
 - [easygraph-bench](https://github.com/tddschn/easygraph-bench)
     Benchmarking code and results of easygraph (Python / C++) and networkx
 
+## Other Graph Libraries
+
+See [other-graph-libraries.md](./other-graph-libraries.md)

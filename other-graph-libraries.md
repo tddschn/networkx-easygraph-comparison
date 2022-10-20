@@ -1,5 +1,10 @@
 # Other Graph Libraries
 
+- [Other Graph Libraries](#other-graph-libraries)
+  - [graph-tool](#graph-tool)
+  - [python-igraph](#python-igraph)
+  - [networkit](#networkit)
+
 ## graph-tool
 
 [doc](https://graph-tool.skewed.de/static/doc/index.html)
