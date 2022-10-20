@@ -12,6 +12,7 @@ deepwalk
 devs
 diedges
 dinitz
+Dunder
 dunder
 easygraph
 edgebfs
@@ -21,6 +22,7 @@ edmondskarp
 flowbetweenness
 Fudan
 gomory
+igraph
 ismags
 isomorphvf
 katz
@@ -37,6 +39,7 @@ mincost
 multidiedges
 multiedges
 multigraphs
+networkit
 networksimplex
 networkx
 NOBE
