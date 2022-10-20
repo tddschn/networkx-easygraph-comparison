@@ -24,4 +24,4 @@
 
 [doc](https://networkit.github.io/dev-docs/python_api/modules.html)
 - lacks:
-  - not found
+  - none found
